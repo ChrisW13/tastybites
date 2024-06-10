@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="css/booking.css">
+    <body style="background-color: wheat;"></body>
+
+</head>
+<img src="tasty bites logo.png" alt="Tasty Bites Logo" width="60" height="60">
+
+<div class="topnav">
+    <a class="active" href="#booking">Booking</a>
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+        <div class="dropdown-content">
+          <a href="menu.html">All Menus</a>
+          <a href="breakfastmenu.html">Breakfast</a>
+          <a href="lunchmenu.html">Lunch Menu</a>
+          <a href="takeawaymenu.html">Takeaway Menu</a>
+          <a href="seasonalmenu.html">Seasonal Menu</a>
+          <a href="setmenu.html">Set Menu</a>
+          <a href="booking.html">Book Now</a>
+          <a href="takeaway.html">Order A Takeaway</a>
+          <a href="snacks.html">Snacks Menu</a>
+        </div>
+    </div>
+    <!--<a href="menu.html"name="menu" id="menu" target="_self">Menus</a>-->
+    <a href="index.html"name="home" id="home" target="_self">Home</a>
+    <a href="takeaway.html"name="takeaway" id="takeaway" target="_self">Order A Takeaway</a>
+    <a href="whatson.html"name="whatson" id="whatson" target="_self">Whats On</a>
+    <a href="about.html"name="about" id="about" target="_self">About Us</a>
+    <a href="contact.html"name="contact" id="contact" target="_self">Contact Us!</a>
+    <input type="text" placeholder="Search..">
+    </div>
+</div>
+<h1>Book A Table</h1>
+<form action="bookingconfirmation.html" method="get">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" required><br>
+    <label for="reservationDate">Reservation Date:</label>
+    <input type="date" id="reservationDate" name="reservationDate" required><br>
+    <label for="reservationTime">Reservation Time:</label>
+    <input type="time" id="reservationTime" name="reservationTime" required><br>
+    <label for="tableCapacity">Table Capacity:</label>
+    <input type="number" id="tableCapacity" name="tableCapacity" required><br>
+    <input type="submit" value="Book Now">
+</form>
+<body>
+    
+</body>
+</html>

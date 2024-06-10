@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bookingconfirmation.css">
+    <title>Booking Confirmation</title>
+    
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Booking Confirmed!</h1>
+        <p>Thank you for your booking. Your booking details are as follows:</p>
+        <div class="details">
+            <p><span>Booking Number:</span> <span id="bookingNumber"></span></p>
+            <p><span>Name:</span> <span id="name"></span></p>
+            <p><span>Email:</span> <span id="email"></span></p>
+            <p><span>Phone:</span> <span id="phone"></span></p>
+            <p><span>Reservation Date:</span> <span id="reservationDate"></span></p>
+            <p><span>Reservation Time:</span> <span id="reservationTime"></span></p>
+            <p><span>Table Capacity:</span> <span id="tableCapacity"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Function to get query parameters from the URL
+        function getQueryParams() {
+            let params = {};
+            let queryString = window.location.search.substring(1);
+            let queries = queryString.split("&");
+            for (let i = 0; i < queries.length; i++) {
+                let pair = queries[i].split("=");
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        }
+
+        // Populate the booking details on the confirmation page
+        function populateBookingDetails() {
+            let params = getQueryParams();
+            document.getElementById('bookingNumber').textContent = 'BN' + Math.floor(Math.random() * 1000000000);
+            document.getElementById('name').textContent = params['name'];
+            document.getElementById('email').textContent = params['email'];
+            document.getElementById('phone').textContent = params['phone'];
+            document.getElementById('reservationDate').textContent = params['reservationDate'];
+            document.getElementById('reservationTime').textContent = params['reservationTime'];
+            document.getElementById('tableCapacity').textContent = params['tableCapacity'];
+        }
+
+        // Call the function to populate booking details when the page loads
+        window.onload = populateBookingDetails;
+    </script>
+</body>
+</html>
+</html>
